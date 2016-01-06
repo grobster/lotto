@@ -39,7 +39,7 @@ import com.grobster.util._
 			val totalReceived = players.map(x => x.amountPaid).sum
 			val lottery = LotteryDrawing("Mega-Winnings", java.time.LocalDate.now)
 			val lotteryNumbers = List(List(12, 44, 32, 53, 50), List(45,17,55,23,42,53), List(34,5, 46,53))
-			val winnings = lotteryNumbers.map(x => NumberMatch.countNumberNumsMatching(x, lottery.getWinningNumbers)).toList
+			val winnings = lotteryNumbers.map(x => NumberMatch.countNumberNumsMatching(x, lottery.getWinningNumbers))
 			println("Amount Received: " + totalReceived)
 			println("number of matched winning numbers: " + winnings)
 		}
